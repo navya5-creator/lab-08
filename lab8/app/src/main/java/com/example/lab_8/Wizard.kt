@@ -1,4 +1,7 @@
 package com.example.lab_8
+
+import kotlin.plus
+
 // CMPUT 301 Lab 8 - CI and TDD
 
 class Wizard(val name: String, var mana: Int, var spellPower: Int) {
@@ -21,8 +24,8 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
             }
         }
     }
+    fun restoreMana(amount: Int) {
+        mana = minOf(100, mana + amount)
+    }
 }
 
-fun restoreMana(amount: Int) {
-    mana = minOf(100, mana + amount)
-}
